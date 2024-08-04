@@ -2,7 +2,7 @@
 name = "winbox"
 version = "0.1.0"
 authors = [{ name = "hazyfossa", email = "hazyfossa@gmail.com" }]
-description = "A very minimal utility for creating message boxes."
+description = "A lightweight helper for creating windows message boxes."
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
