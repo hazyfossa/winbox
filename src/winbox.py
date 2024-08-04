@@ -71,6 +71,7 @@ class Box:
     def send(self, message: str | None = None, callback: Callable[[Response], None] | None = None) -> Response | None:
         if callback:
             Thread(target=lambda: callback(self.send(message))).start()
+            return
 
         message = message or self.default_message
 
