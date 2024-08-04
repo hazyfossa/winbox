@@ -3,7 +3,7 @@ from dataclasses import dataclass
 from enum import IntEnum
 from platform import system
 from threading import Thread
-from typing import Callable, Literal
+from typing import Callable, Literal, overload
 
 if system() != "Windows":
     raise ImportError("Winbox is only available on Windows.")
@@ -62,7 +62,13 @@ class Box:
     default_button: DefaultButton = 1
     window: int | None = None
 
-    def send(self, message: str | None = None, callback: Callable[[Response], None] | None = None) -> Response:
+    @overload
+    def send(self, message: str | None, callback: Callable[[Response], None]) -> None: ...
+
+    @overload
+    def send(self, message: str | None, callback: Literal[None] = None) -> Response: ...
+
+    def send(self, message: str | None = None, callback: Callable[[Response], None] | None = None) -> Response | None:
         if callback:
             Thread(target=lambda: callback(self.send(message))).start()
 
