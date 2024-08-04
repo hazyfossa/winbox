@@ -1,0 +1,18 @@
+[project]
+name = "winbox"
+version = "0.1.0"
+authors = [{ name = "hazyfossa", email = "hazyfossa@gmail.com" }]
+description = "A very minimal utility for creating message boxes."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Intended Audience :: Developers",
+    "Development Status :: 4 - Beta",
+]
+
+[project.urls]
+Homepage = "https://github.com/pypa/sampleproject"
+Issues = "https://github.com/pypa/sampleproject/issues"
