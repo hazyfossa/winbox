@@ -16,3 +16,7 @@ classifiers = [
 [project.urls]
 Homepage = "https://github.com/hazyfossa/winbox"
 Issues = "https://github.com/hazyfossa/winbox/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
